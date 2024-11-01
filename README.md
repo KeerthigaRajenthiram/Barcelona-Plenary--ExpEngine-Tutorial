@@ -7,4 +7,4 @@ By the end of this tutorial, you will be able to:
 - Understand key elements and syntax of the DSL.
 - Run and monitor experiments on the Experimentation Engine.
 
-Let's get started!
+Please click on the Wiki Pages tab to get started!
