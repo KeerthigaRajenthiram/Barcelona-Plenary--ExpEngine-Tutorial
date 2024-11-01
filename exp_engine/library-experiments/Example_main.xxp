@@ -1,0 +1,79 @@
+package Example;
+
+workflow Example_main {
+  define task Task1;
+  define task Task2;
+  define task Task3;
+  define task Task4;
+
+  // Task CONNECTIONS
+  START -> Task1 -> Task2 -> Task3 -> Task4 -> END;
+
+  configure task Task1 {
+    implementation "Example/Task1";
+  }
+
+  configure task Task3 {
+    implementation "Example/Task3";
+  }
+
+  configure task Task4 {
+    subworkflow "Task4_main";
+  }
+
+
+  // DATA
+  define input data InputData;
+
+  // DATA CONNECTIONS
+  InputData --> Task1.InputData;
+
+  configure data InputData {
+    path "/data-subset/**";
+  }
+
+  // METRICS
+  define metric accuracy;
+  define metric loss;
+  define metric recall;
+}
+
+
+
+workflow Task2_v1 from Example_main {
+  configure task Task2 {
+    implementation "Example/Task2_v1";
+  }
+}
+
+workflow Task2_v2 from Example_main {
+  configure task Task2 {
+    implementation "Example/Task2_v2";
+  }
+}
+
+experiment EXP {
+  control {
+    S1 -> S2;
+  }
+
+  space S1 of Task2_v1 {
+    strategy gridsearch;
+    param param1_vp = enum(2,4);
+    param param2_vp = enum(20,40);
+    configure task Task2 {
+      param param1 = param1_vp;
+      param param2 = param2_vp;
+    }
+  }
+
+   space S2 of Task2_v2 {
+    strategy gridsearch;
+    param param1_vp = enum(5, 7);
+    param param2_vp = range(30, 34, 2);
+    configure task Task2 {
+      param param1 = param1_vp;
+      param param2 = param2_vp;
+    }
+  }
+}
