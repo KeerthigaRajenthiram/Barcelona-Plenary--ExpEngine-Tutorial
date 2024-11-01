@@ -6,9 +6,9 @@ DATASET_LIBRARY_RELATIVE_PATH = 'exp_engine/library-datasets'
 PYTHON_DEPENDENCIES_RELATIVE_PATH = 'exp_engine/tasks'
 
 # Proactive credentials (mandatory - ask ACTIVEEON)
-PROACTIVE_USERNAME=" "
-PROACTIVE_PASSWORD=" "
+PROACTIVE_USERNAME=""
+PROACTIVE_PASSWORD=""
 
 # Data abstraction credentials (mandatory - ask CUNI)
 DATA_ABSTRACTION_BASE_URL = "https://api.expvis.smartarch.cz/api"
-DATA_ABSTRACTION_ACCESS_TOKEN = ' '
+DATA_ABSTRACTION_ACCESS_TOKEN = 'b7eff0fc1e2ddea77bf3844412c0957b52dd8dd9'
