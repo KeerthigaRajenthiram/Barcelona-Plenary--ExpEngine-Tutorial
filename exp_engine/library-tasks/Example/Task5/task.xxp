@@ -1,0 +1,3 @@
+task Task5 {
+    implementation "Example/Task5/task.py";
+}
