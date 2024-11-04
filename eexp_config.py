@@ -1,8 +1,8 @@
 # Main folders (mandatory) - paths are just examples
-TASK_LIBRARY_PATH = 'exp_engine/library-tasks'
-EXPERIMENT_LIBRARY_PATH = 'exp_engine/library-experiments'
+TASK_LIBRARY_PATH = 'library-tasks'
+EXPERIMENT_LIBRARY_PATH = 'library-experiments'
 # The ones below has to be a path relative to the client script
-DATASET_LIBRARY_RELATIVE_PATH = 'exp_engine/library-datasets'
+DATASET_LIBRARY_RELATIVE_PATH = 'library-datasets'
 PYTHON_DEPENDENCIES_RELATIVE_PATH = 'exp_engine/tasks'
 
 # Proactive credentials (mandatory - ask ACTIVEEON)
