@@ -34,8 +34,8 @@ workflow Example_main {
 
   // METRICS
   define metric accuracy;
-  define metric loss;
-  define metric recall;
+  // define metric loss;
+  // define metric recall;
 }
 
 
@@ -59,8 +59,8 @@ experiment EXP {
 
   space S1 of Task2_v1 {
     strategy gridsearch;
-    param param1_vp = enum(2,4);
-    param param2_vp = enum(20,40);
+    param param1_vp = enum(2);
+    param param2_vp = enum(20);
     configure task Task2 {
       param param1 = param1_vp;
       param param2 = param2_vp;
@@ -69,8 +69,8 @@ experiment EXP {
 
    space S2 of Task2_v2 {
     strategy gridsearch;
-    param param1_vp = enum(5, 7);
-    param param2_vp = range(30, 34, 2);
+    param param1_vp = enum(5);
+    param param2_vp = range(30, 32, 2);
     configure task Task2 {
       param param1 = param1_vp;
       param param2 = param2_vp;
