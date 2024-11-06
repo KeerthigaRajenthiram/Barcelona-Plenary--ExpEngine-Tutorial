@@ -32,10 +32,6 @@ workflow Example_main {
     path "/data-subset/**";
   }
 
-  // METRICS
-  define metric accuracy;
-  // define metric loss;
-  // define metric recall;
 }
 
 
@@ -57,7 +53,7 @@ experiment EXP {
     S1 -> S2;
   }
 
-  space S1 of Task2_v1 {
+  space S1 of FDW1 {
     strategy gridsearch;
     param param1_vp = enum(2, 4);
     param param2_vp = range(20, 24, 2);
@@ -67,13 +63,13 @@ experiment EXP {
     }
   }
 
-   space S2 of Task2_v2 {
+   space S2 of FDW2 {
     strategy gridsearch;
     param param3_vp = enum(5, 7);
     param param4_vp = enum(30, 40);
     configure task Task2 {
-      param param1 = param1_vp;
-      param param2 = param2_vp;
+      param param1 = param3_vp;
+      param param2 = param4_vp;
     }
   }
 }

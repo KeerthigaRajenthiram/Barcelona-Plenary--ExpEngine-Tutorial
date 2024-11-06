@@ -1,3 +1,5 @@
-print("Printing from Task6")
+import random
 
-resultMap.put("accuracy", 0.9)
+print("Printing from Task6")
+accuracy = random.random()
+resultMap.put("example_accuracy", accuracy)
