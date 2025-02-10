@@ -6,8 +6,8 @@ PYTHON_DEPENDENCIES_RELATIVE_PATH = ''
 
 EXECUTIONWARE = "PROACTIVE"
 # Proactive credentials (mandatory - ask ACTIVEEON)
-PROACTIVE_USERNAME="pa12904"
-PROACTIVE_PASSWORD="3429cg3y!$#W5ff4"
+PROACTIVE_USERNAME=""
+PROACTIVE_PASSWORD=""
 
 # Data abstraction credentials (mandatory - ask CUNI)
 DATA_ABSTRACTION_BASE_URL = "https://api.expvis.smartarch.cz/api"
