@@ -1,23 +1,20 @@
 package Example;
 
 workflow Example_main {
-  define task Task1;
-  define task Task2;
-  define task Task3;
-  define task Task4;
 
-  // Task CONNECTIONS
   START -> Task1 -> Task2 -> Task3 -> Task4 -> END;
 
-  configure task Task1 {
+  task Task2;
+
+  task Task1 {
     implementation "Example/Task1";
   }
 
-  configure task Task3 {
+  task Task3 {
     implementation "Example/Task3";
   }
 
-  configure task Task4 {
+  task Task4 {
     subworkflow "Task4_main";
   }
 
@@ -37,13 +34,13 @@ workflow Example_main {
 
 
 workflow FDW1 from Example_main {
-  configure task Task2 {
+  task Task2 {
     implementation "Example/Task2_v1";
   }
 }
 
 workflow FDW2 from Example_main {
-  configure task Task2 {
+  task Task2 {
     implementation "Example/Task2_v2";
   }
 }
@@ -57,7 +54,7 @@ experiment EXP {
     strategy gridsearch;
     param param1_vp = enum(2, 4);
     param param2_vp = range(20, 24, 2);
-    configure task Task2 {
+    task Task2 {
       param param1 = param1_vp;
       param param2 = param2_vp;
     }
@@ -67,7 +64,7 @@ experiment EXP {
     strategy gridsearch;
     param param3_vp = enum(5, 7);
     param param4_vp = enum(30, 40);
-    configure task Task2 {
+    task Task2 {
       param param1 = param3_vp;
       param param2 = param4_vp;
     }

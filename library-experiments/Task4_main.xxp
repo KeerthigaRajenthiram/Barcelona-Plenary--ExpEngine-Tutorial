@@ -1,15 +1,13 @@
 workflow Task4_main{
-  define task Task5;
-  define task Task6;
 
   // Task CONNECTIONS
   START -> Task5 -> Task6 -> END;
 
-  configure task Task5 {
+  task Task5 {
     implementation "Example/Task5";
   }
 
-  configure task Task6 {
+  task Task6 {
     implementation "Example/Task6";
   }
 

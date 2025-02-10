@@ -2,10 +2,12 @@
 TASK_LIBRARY_PATH = 'library-tasks'
 EXPERIMENT_LIBRARY_PATH = 'library-experiments'
 DATASET_LIBRARY_RELATIVE_PATH = 'library-datasets'
+PYTHON_DEPENDENCIES_RELATIVE_PATH = ''
 
+EXECUTIONWARE = "PROACTIVE"
 # Proactive credentials (mandatory - ask ACTIVEEON)
-PROACTIVE_USERNAME=""
-PROACTIVE_PASSWORD=""
+PROACTIVE_USERNAME="pa12904"
+PROACTIVE_PASSWORD="3429cg3y!$#W5ff4"
 
 # Data abstraction credentials (mandatory - ask CUNI)
 DATA_ABSTRACTION_BASE_URL = "https://api.expvis.smartarch.cz/api"

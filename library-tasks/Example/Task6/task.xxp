@@ -1,7 +1,6 @@
 task Task6 {
 
       define metric example_accuracy {
-        semanticType accuracy;
         kind single-value;
         type double;
     }

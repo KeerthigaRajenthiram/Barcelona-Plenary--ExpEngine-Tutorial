@@ -1,3 +1,15 @@
 task Task2_v1 {
     implementation "Example/Task2_v1/task.py";
+
+    define param param1 {
+        type Integer;
+        default 90;
+        range (1,200);
+    }
+
+    define param param2 {
+        type Integer;
+        default 90;
+        range (1,200);
+    }
 }
